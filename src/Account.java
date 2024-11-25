@@ -1,46 +1,46 @@
-public abstract class Account extends User
+
+public class Account extends User
 {
+    private String accountType; // e.g., Dentist, Patient, Receptionist
+    private boolean isActive; // Account status
 
-    public Account(String Username, String Password, String Email)
+    // Constructor
+    public Account(String Username, String Password, String Firstname, String Lastname,String Email,
+                   String Mobilenum,String accountType, boolean isActive)
     {
-        this.Username = Username;
-        this.Password = Password;
-        this.Email = Email;
+        super(Username, Password, Firstname, Lastname,Email,Mobilenum);
+        this.accountType = accountType;
+        this.isActive = isActive;
     }
 
-    // Getters and setters
-    public String getUsername()
+    // Getters and Setters
+    public String getAccountType()
     {
-        return Username;
+        return accountType;
     }
 
-    public void setUsername(String username)
+    public void setAccountType(String accountType)
     {
-        this.Username = Username;
+        this.accountType = accountType;
     }
 
-    public String getPassword()
+    public boolean isActive()
     {
-        return Password;
+        return isActive;
     }
 
-    public void setPassword(String Password)
+    public void setActive(boolean active)
     {
-        this.Password=Password;
+        isActive = active;
     }
 
-    public String getEmail()
+    @Override
+    public String toString()
     {
-        return Email;
+        return "Account{" +
+                "accountType='" + accountType + '\'' +
+                ", isActive=" + isActive +
+                ", User Info=" + super.toString() +
+                '}';
     }
-
-    public void setEmail(String Email)
-    {
-        this.Email=Email;
-    }
-
-    // Abstract methods for role-specific functionalities
-    public abstract void displayRole();
-
-
 }
