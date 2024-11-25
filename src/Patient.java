@@ -1,10 +1,9 @@
 public class Patient extends User
 {
-    int Patientage;
-    String Patientbloodtype;
+   int Patientage;
+     String Patientbloodtype;
     int Patientweight;
-    int Patientheight;
-    String Patientgender;
+     int Patientheight;
 
     public Patient ()
     {

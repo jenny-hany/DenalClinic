@@ -4,6 +4,7 @@ public class Doctor extends User
     Float Dr_availablehours;
     String Dr_Specialization;
 
+
     public Doctor ()
     {
         //write all parameters here and declare
