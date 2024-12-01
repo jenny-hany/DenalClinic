@@ -1,5 +1,4 @@
 public class AppointmentReservation {
-  private String date; // Format: DD/MM/YYYY
   private String day;  // Day of the week
   private String doctorName;
   private String patientName;
@@ -65,7 +64,8 @@ public class AppointmentReservation {
   }
 
   // Display Appointment Details
-  public void displayAppointmentDetails() {
+  public void displayAppointmentDetails()
+  {
     System.out.println("Appointment Details:");
     System.out.println("Date: " + date);
     System.out.println("Day: " + day);
@@ -73,7 +73,10 @@ public class AppointmentReservation {
     System.out.println("Doctor: " + doctorName);
     System.out.println("Patient: " + patientName);
   }
+  public void setappointmentdetails(Doctor d ,String day,String timeSlot)
+  {
 
+  }
   @Override
   public String toString() {
     return "AppointmentReservation{" +

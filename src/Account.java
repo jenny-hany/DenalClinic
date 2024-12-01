@@ -2,6 +2,7 @@ public class Account extends User {
     private String accountType; // e.g., Dentist, Patient, Receptionist
     private boolean isActive;
 
+
     public Account(String username, String password, String firstName, String lastName, String email,
                    String mobileNum, String accountType, boolean isActive) {
         super(username, password, firstName, lastName, email, mobileNum);
@@ -24,6 +25,7 @@ public class Account extends User {
     public void setActive(boolean active) {
         isActive = active;
     }
+
 
     @Override
     public String toString() {
