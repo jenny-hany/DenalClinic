@@ -28,6 +28,36 @@ public class Description {
                         " (Specialization: " + doctor.getSpecialization() + ")");
             }
         }
-    }}
+    }
 
-// Display information ab
+    // Display information about all patients
+    public void displayPatients() {
+        System.out.println("Patients:");
+        // Loop through the patients array and display information if the patient is not null
+        for (Patient patient : clinic.getPatients()) {
+            if (patient != null) {
+                System.out.println("- " + patient.getFirstName() + " " + patient.getLastName() +
+                        " (Age: " + patient.getAge() + ", Blood Type: " + patient.getBloodType() + ")");
+            }
+        }
+    }
+
+    // Display information about all receptionists
+    public void displayReceptionists() {
+        System.out.println("Receptionists:");
+        for (Receptionist receptionist : clinic.getReceptionists()) {
+            if (receptionist != null) {
+                System.out.println("- " + receptionist.getFirstName() + " " + receptionist.getLastName() +
+                        " (Gender: " + receptionist.getGender() + ")");
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Description{" +
+                "clinicName=" + clinic.getName() +
+                ", location=" + clinic.getLocation() +
+                '}';
+    }
+}
