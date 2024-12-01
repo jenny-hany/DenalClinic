@@ -1,42 +1,32 @@
-
-public class Account extends User
-{
+public class Account extends User {
     private String accountType; // e.g., Dentist, Patient, Receptionist
-    private boolean isActive; // Account status
+    private boolean isActive;
 
-    // Constructor
-    public Account(String Username, String Password, String Firstname, String Lastname,String Email,
-                   String Mobilenum,String accountType, boolean isActive)
-    {
-        super(Username, Password, Firstname, Lastname,Email,Mobilenum);
+    public Account(String username, String password, String firstName, String lastName, String email,
+                   String mobileNum, String accountType, boolean isActive) {
+        super(username, password, firstName, lastName, email, mobileNum);
         this.accountType = accountType;
         this.isActive = isActive;
     }
 
-    // Getters and Setters
-    public String getAccountType()
-    {
+    public String getAccountType() {
         return accountType;
     }
 
-    public void setAccountType(String accountType)
-    {
+    public void setAccountType(String accountType) {
         this.accountType = accountType;
     }
 
-    public boolean isActive()
-    {
+    public boolean isActive() {
         return isActive;
     }
 
-    public void setActive(boolean active)
-    {
+    public void setActive(boolean active) {
         isActive = active;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Account{" +
                 "accountType='" + accountType + '\'' +
                 ", isActive=" + isActive +

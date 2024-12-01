@@ -1,72 +1,91 @@
 public abstract class User
 {
-     String Username;
-     String Password;
-     String Firstname;
-    String Lastname;
-    String Email;
-     String Mobilenum;
+    private String username;
+    private String password;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String mobileNum;
 
-    public User(String Username, String Password, String FirstName, String LastName,
-                String Email, String Mobilenum)
+    public User(String username, String password, String firstName, String lastName, String email, String mobileNum)
     {
-        this.Username = Username;
-        this.Password = Password;
-        this.Firstname = FirstName;
-        this.Lastname = LastName;
-        this.Email = Email;
-        this.Mobilenum = Mobilenum;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.mobileNum = mobileNum;
     }
 
     // Getters and Setters
-    public String getEmail()
+    public String getUsername()
     {
-        return Email;
+        return username;
     }
 
-    public void setEmail(String Email)
+    public void setUsername(String username)
     {
-        this.Email = Email;
+        this.username = username;
     }
 
     public String getPassword()
     {
-        return Password;
+        return password;
     }
 
-    public void setPassword(String Password)
+    public void setPassword(String password)
     {
-        this.Password = Password;
+        this.password = password;
     }
 
     public String getFirstName()
     {
-        return Firstname;
+        return firstName;
     }
 
-    public void setFirstName(String Firstname)
+    public void setFirstName(String firstName)
     {
-        this.Firstname = Firstname;
+        this.firstName = firstName;
     }
 
     public String getLastName()
     {
-        return Lastname;
+        return lastName;
     }
 
-    public void setLastName(String Lastname)
+    public void setLastName(String lastName)
     {
-        this.Lastname = Lastname;
+        this.lastName = lastName;
+    }
+
+    public String getEmail()
+    {
+        return email;
+    }
+
+    public void setEmail(String email)
+    {
+        this.email = email;
+    }
+
+    public String getMobileNum()
+    {
+        return mobileNum;
+    }
+
+    public void setMobileNum(String mobileNum)
+    {
+        this.mobileNum = mobileNum;
     }
 
     @Override
     public String toString()
     {
         return "User{" +
-                "email='" + Email + '\'' +
-                ", firstName='" + Firstname + '\'' +
-                ", lastName='" + Lastname + '\'' +
+                "username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
-
 }

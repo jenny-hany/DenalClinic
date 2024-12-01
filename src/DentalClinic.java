@@ -1,39 +1,43 @@
-public class DentalClinic
-{
-    String name;
-    String location;
-    Doctor [] doctors=new Doctor[4];
-    Patient [] patients= new Patient[10];
-    Receptionist [] receptionists =new Receptionist[3];
-    int prices;
-    String [] services = new String[10];
-    //Check-ups, cleanings, and advice on oral health.
-    //Fluoride treatments and cavity prevention.
-    //Fixing Teeth
-    //
-    //Fillings, crowns, bridges, and dentures.
-    //Dental implants and root canals.
-    //Gum Care
-    //
-    //Treating gum disease and keeping gums healthy.
-    //Cosmetic Services
-    //
-    //Teeth whitening, veneers, and smile makeovers.
-    //Straightening Teeth
-    //
-    //Braces or clear aligners (like Invisalign).
-    //Children's Dentistry
-    //
-    //Special care for kids’ teeth and advice for healthy habits.
-    //Emergencies
-    //
-    //Fixing broken teeth or treating pain and infections.
-    //Surgery
-    //
-    //Tooth extractions, including wisdom teeth, and implant surgery
+public class DentalClinic {
+    private String name;
+    private String location;
+    private Doctor[] doctors = new Doctor[4];
+    private Patient[] patients = new Patient[10];
+    private Receptionist[] receptionists = new Receptionist[3];
+    private int prices;
+    private String[] services = new String[10];
 
-    public DentalClinic()
-    {
-        //param.
+    public DentalClinic(String name, String location, int prices) {
+        this.name = name;
+        this.location = location;
+        this.prices = prices;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public int getPrices() {
+        return prices;
+    }
+
+    public String[] getServices() {
+        return services;
+    }
+
+    public Doctor[] getDoctors() {
+        return doctors;
+    }
+
+    public Patient[] getPatients() {
+        return patients;
+    }
+
+    public Receptionist[] getReceptionists() {
+        return receptionists;
     }
 }

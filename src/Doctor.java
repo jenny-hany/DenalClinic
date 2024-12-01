@@ -1,17 +1,57 @@
 public class Doctor extends User
 {
-    String Dr_availabledays[] = new String[7];
-    Float Dr_availablehours;
-    String Dr_Specialization;
+    private String[] availableDays = new String[7];
+    private float availableHours;
+    private String specialization;
 
-
-    public Doctor ()
+    public Doctor(String username, String password, String firstName, String lastName, String email,
+                  String mobileNum, String specialization)
     {
-        //write all parameters here and declare
-    }
-    public void CreatePrescription()
-    {
-        //patient name,patient details ,
+        super(username, password, firstName, lastName, email, mobileNum);
+        this.specialization = specialization;
     }
 
+    public String[] getAvailableDays()
+    {
+        return availableDays;
+    }
+
+    public void setAvailableDays(String[] availableDays)
+    {
+        this.availableDays = availableDays;
+    }
+
+    public float getAvailableHours()
+    {
+        return availableHours;
+    }
+
+    public void setAvailableHours(float availableHours)
+    {
+        this.availableHours = availableHours;
+    }
+
+    public String getSpecialization()
+    {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization)
+    {
+        this.specialization = specialization;
+    }
+
+    public void createPrescription(String patientName, String details)
+    {
+        System.out.println("Prescription for " + patientName + ": " + details);
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Doctor{" +
+                "specialization='" + specialization + '\'' +
+                ", User Info=" + super.toString() +
+                '}';
+    }
 }
